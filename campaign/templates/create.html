@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+{% load staticfiles %}
+
+<head>
+    <meta charset="UTF-8">
+    <title>Create a new campaing</title>
+</head>
+<body>
+
+<h1>Create a new campaign</h1>
+
+<p>
+<a href="start"><img src="{% static 'lstart.png'%}"></a>
+<a href="create"><img src="{% static 'bcreate.png'%}"></a>
+<a href="prepare"><img src="{% static 'lprepare.png'%}"></a>
+<a href="followup"><img src="{% static 'lfollowup.png'%}"></a>
+<a href="evaluate"><img src="{% static 'levaluate.png'%}"></a>
+<a href="report"><img src="{% static 'lreport.png'%}"></a>
+</p>
+
+<p>Create a new sequence of information to be sent to the user within the current campaign</p>
+<ul>
+    <li>Select a current campaign from the active campaigns to operate from the table Current_Campaign</li>
+
+    <li>Create at least one post for each category using the mezzanine administrator.
+        Take the id of each post and fill the table NEWSLETTER to indicate the default sequence of each
+        post to be send to each participant in the current campaign</li>
+    <li>Assign the Sequence to be run to the current campaign</li>
+    <li>Run the assignment of posts to each participant to create the individual newsletter to be exposed
+    in the site or send by email</li>
+</ul>
+<p>
+    List all the actives campaings
+</p>
+<ul>
+
+
+    {% for campaign in campaigns %}
+<li>    {{ forloop.counter}}
+        <a href="create_newsletter"> {{ campaign.campaign_name }}</a> Here we create the sent newsletter table </li>
+    {% endfor %}
+
+</ul>
+</body>
+</html>

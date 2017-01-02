@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+{% load staticfiles %}
+
+<head>
+    <meta charset="UTF-8">
+    <title>Start a campaign</title>
+</head>
+<body>
+
+<h1>Create a new campaign</h1>
+
+<p>
+<a href="start"><img src="{% static 'bstart.png'%}"></a>
+<a href="create"><img src="{% static 'lcreate.png'%}"></a>
+<a href="prepare"><img src="{% static 'lprepare.png'%}"></a>
+<a href="followup"><img src="{% static 'lfollowup.png'%}"></a>
+<a href="evaluate"><img src="{% static 'levaluate.png'%}"></a>
+<a href="report"><img src="{% static 'lreport.png'%}"></a>
+</p>
+
+
+<p>For the time being the creation of the campaign is done using the admin interface, later we will
+    add this funcionality to the system
+</p>
+<p>To create a campaign you provide the name and description of the campaing, started in inactive status</p>
+
+</body>
+</html>
